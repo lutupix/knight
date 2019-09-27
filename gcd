@@ -1,0 +1,23 @@
+#include<stdio.h>
+long LCM(int a,int b)
+{
+	if(a>b)
+	{
+		a=a-b;
+		LCM(a,b);
+	}
+	else if(a<b)
+	{
+		b=b-a;
+		LCM(a,b);
+	}
+	else 
+	return a;
+}
+main()
+{
+	int a,b,c;
+	scanf("%d,%d",&a,&b);
+	c=LCM(a,b);
+	printf("%d",c);
+}
